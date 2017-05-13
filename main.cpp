@@ -6,13 +6,13 @@
 
 int main()
 {
-	std::cout << "Please enter cities count: " << std::endl;
+	std::cout << "Please enter map width: " << std::endl;
 	int cities = 0;
 	std::cin >> cities;
 
 	std::cout << "Generated map: " << std::endl;
 
-	Map map{(int) (cities * cities * 0.6F), cities, cities};
+	Map map{(int) (cities * cities * 0.2F), cities, cities};
 	std::cout << map << std::endl;
 
 	Population population{50, map};
