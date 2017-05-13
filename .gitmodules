@@ -1,0 +1,3 @@
+[submodule "lib/common-cpp"]
+	path = lib/common-cpp
+	url = git@github.com:gelldur/common-cpp.git
