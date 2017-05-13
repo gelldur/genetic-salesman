@@ -45,6 +45,34 @@ int main()
 
 	std::cout << "This is the END! It took: " << (std::chrono::duration_cast<std::chrono::milliseconds>
 			(std::chrono::steady_clock::now() - start)).count() << " mls" << std::endl;
+	std::cout << "Now some brute force!!!!!!!!!" << std::endl;
 
+	start = std::chrono::steady_clock::now();
+
+	auto allCities = population.getBestRoute(map).getVisitedCities();
+	std::vector<int> permutations;
+	for (int i = 0; i < allCities.size(); ++i)
+	{
+		permutations.emplace_back(i);
+	}
+
+	std::vector<City> pickedCities;
+	do
+	{
+		pickedCities.clear();
+		for (auto i : permutations)
+		{
+			pickedCities.emplace_back(allCities[i]);
+		}
+		Route permutation{pickedCities};
+		if (bestRouteDistance > permutation.totalDistance(map))
+		{
+			std::cout << "Better route in brute force: " << permutation.totalDistance(map) << std::endl;
+			std::cout << "\tRoute:" << permutation << std::endl;
+			bestRouteDistance = permutation.totalDistance(map);
+		}
+	} while (std::next_permutation(permutations.begin(), permutations.end()));
+	std::cout << "This is the END! It took: " << (std::chrono::duration_cast<std::chrono::milliseconds>
+			(std::chrono::steady_clock::now() - start)).count() << " mls" << std::endl;
 	return 0;
 }
