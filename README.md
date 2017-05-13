@@ -9,78 +9,70 @@ Small task for UAM
 - [Creating a genetic algorithm for beginners](http://www.theprojectspot.com/tutorial-post/creating-a-genetic-algorithm-for-beginners/3)
 
 
+Using this algorithm working time is easy to predict like: 1200 mls
+
+### For map width: 8 (10 cities)
+
+- genetic algorithm: 1 193 mls, best distance: 22.3014 (for 1000 generations)
+- brute force: 506 692 mls, best distance: 22.1981
+
+### For map width: 7 (9 cities)
+
+- genetic algorithm: 103 mls, best distance: 14.4049 (for 100 generations)
+- brute force: 327 mls, best distance: 14.4049
 
 ### Sample output
 
 ```
 Please enter map width: 
-10
+8
 Generated map: 
-#|#|#|#|G|#|#|#|P|T| 9 
---------------------
-#|#|D|#|#|I|#|#|O|S| 8 
---------------------
-#|C|#|E|#|#|J|L|#|#| 7 
---------------------
-#|#|#|#|#|#|#|#|N|#| 6 
---------------------
-#|#|#|#|#|#|#|#|#|R| 5 
---------------------
-#|#|#|#|#|#|#|#|#|#| 4 
---------------------
-#|B|#|#|#|#|#|K|#|#| 3 
---------------------
-#|#|#|#|#|#|#|#|M|Q| 2 
---------------------
-A|#|#|#|F|H|#|#|#|#| 1 
---------------------
-#|#|#|#|#|#|#|#|#|#| 0 
---------------------
-0 1 2 3 4 5 6 7 8 9 
-First best route in population #1: 75.8153
-Route: |->[x: 1 y: 7]->[x: 2 y: 8]->[x: 9 y: 9]->[x: 8 y: 8]->[x: 8 y: 6]->[x: 8 y: 2]->[x: 8 y: 9]->[x: 5 y: 8]->[x: 3 y: 7]->[x: 1 y: 3]->[x: 4 y: 1]->[x: 5 y: 1]->[x: 6 y: 7]->[x: 4 y: 9]->[x: 9 y: 8]->[x: 7 y: 7]->[x: 9 y: 5]->[x: 0 y: 1]->[x: 7 y: 3]->[x: 9 y: 2]|
-Genetic algorithm config: tournamentSize: 5 mutationRate: 0.015 elitsm: 1#3 Better route in population: 73.6296
-	Route:|->[x: 9 y: 5]->[x: 9 y: 8]->[x: 0 y: 1]->[x: 1 y: 3]->[x: 2 y: 8]->[x: 5 y: 1]->[x: 8 y: 6]->[x: 6 y: 7]->[x: 5 y: 8]->[x: 1 y: 7]->[x: 4 y: 9]->[x: 3 y: 7]->[x: 9 y: 9]->[x: 8 y: 9]->[x: 7 y: 7]->[x: 8 y: 8]->[x: 9 y: 2]->[x: 7 y: 3]->[x: 8 y: 2]->[x: 4 y: 1]|
-#4 Better route in population: 70.2956
-	Route:|->[x: 9 y: 2]->[x: 7 y: 3]->[x: 8 y: 2]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]->[x: 8 y: 9]->[x: 9 y: 5]->[x: 2 y: 8]->[x: 1 y: 7]->[x: 4 y: 9]->[x: 3 y: 7]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 7 y: 7]->[x: 8 y: 8]->[x: 5 y: 1]->[x: 8 y: 6]->[x: 6 y: 7]->[x: 5 y: 8]|
-#6 Better route in population: 67.5483
-	Route:|->[x: 8 y: 2]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]->[x: 2 y: 8]->[x: 1 y: 7]->[x: 4 y: 9]->[x: 3 y: 7]->[x: 9 y: 9]->[x: 5 y: 1]->[x: 8 y: 6]->[x: 8 y: 9]->[x: 7 y: 7]->[x: 8 y: 8]->[x: 9 y: 8]->[x: 9 y: 2]->[x: 7 y: 3]->[x: 9 y: 5]->[x: 6 y: 7]->[x: 5 y: 8]|
-#7 Better route in population: 63.1297
-	Route:|->[x: 4 y: 9]->[x: 2 y: 8]->[x: 1 y: 7]->[x: 3 y: 7]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 7 y: 7]->[x: 8 y: 8]->[x: 8 y: 2]->[x: 8 y: 6]->[x: 6 y: 7]->[x: 5 y: 8]->[x: 9 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]->[x: 8 y: 9]->[x: 9 y: 5]|
-#9 Better route in population: 60.8896
-	Route:|->[x: 4 y: 9]->[x: 2 y: 8]->[x: 1 y: 7]->[x: 3 y: 7]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 8 y: 8]->[x: 8 y: 2]->[x: 8 y: 6]->[x: 6 y: 7]->[x: 5 y: 8]->[x: 7 y: 7]->[x: 9 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]->[x: 8 y: 9]->[x: 9 y: 5]|
-#11 Better route in population: 60.3185
-	Route:|->[x: 8 y: 6]->[x: 6 y: 7]->[x: 5 y: 8]->[x: 9 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]->[x: 8 y: 9]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 7 y: 7]->[x: 8 y: 8]->[x: 9 y: 5]->[x: 4 y: 9]->[x: 2 y: 8]->[x: 1 y: 7]->[x: 3 y: 7]->[x: 8 y: 2]|
-#12 Better route in population: 57.1203
-	Route:|->[x: 8 y: 6]->[x: 6 y: 7]->[x: 5 y: 8]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 7 y: 7]->[x: 8 y: 8]->[x: 8 y: 2]->[x: 9 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]->[x: 8 y: 9]->[x: 9 y: 5]->[x: 4 y: 9]->[x: 2 y: 8]->[x: 1 y: 7]->[x: 3 y: 7]|
-#13 Better route in population: 52.4405
-	Route:|->[x: 4 y: 9]->[x: 2 y: 8]->[x: 1 y: 7]->[x: 3 y: 7]->[x: 8 y: 6]->[x: 6 y: 7]->[x: 5 y: 8]->[x: 8 y: 2]->[x: 9 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]->[x: 8 y: 9]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 7 y: 7]->[x: 8 y: 8]->[x: 9 y: 5]|
-#14 Better route in population: 50.4804
-	Route:|->[x: 8 y: 8]->[x: 4 y: 9]->[x: 2 y: 8]->[x: 1 y: 7]->[x: 3 y: 7]->[x: 6 y: 7]->[x: 5 y: 8]->[x: 8 y: 2]->[x: 9 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]->[x: 8 y: 9]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 7 y: 7]->[x: 8 y: 6]->[x: 9 y: 5]|
-#15 Better route in population: 49.5196
-	Route:|->[x: 4 y: 9]->[x: 2 y: 8]->[x: 1 y: 7]->[x: 3 y: 7]->[x: 6 y: 7]->[x: 5 y: 8]->[x: 8 y: 2]->[x: 9 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]->[x: 8 y: 9]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 7 y: 7]->[x: 8 y: 6]->[x: 9 y: 5]->[x: 8 y: 8]|
-#16 Better route in population: 44.4231
-	Route:|->[x: 8 y: 9]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 7 y: 7]->[x: 8 y: 6]->[x: 9 y: 5]->[x: 8 y: 8]->[x: 4 y: 9]->[x: 2 y: 8]->[x: 1 y: 7]->[x: 3 y: 7]->[x: 6 y: 7]->[x: 5 y: 8]->[x: 8 y: 2]->[x: 9 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]|
-#18 Better route in population: 43.439
-	Route:|->[x: 8 y: 9]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 9 y: 5]->[x: 8 y: 6]->[x: 7 y: 7]->[x: 8 y: 8]->[x: 4 y: 9]->[x: 2 y: 8]->[x: 1 y: 7]->[x: 3 y: 7]->[x: 6 y: 7]->[x: 5 y: 8]->[x: 8 y: 2]->[x: 9 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]|
-#20 Better route in population: 38.7149
-	Route:|->[x: 8 y: 9]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 8 y: 8]->[x: 4 y: 9]->[x: 2 y: 8]->[x: 1 y: 7]->[x: 3 y: 7]->[x: 6 y: 7]->[x: 5 y: 8]->[x: 7 y: 7]->[x: 8 y: 6]->[x: 9 y: 5]->[x: 8 y: 2]->[x: 9 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]|
-#23 Better route in population: 37.5918
-	Route:|->[x: 4 y: 9]->[x: 2 y: 8]->[x: 1 y: 7]->[x: 3 y: 7]->[x: 6 y: 7]->[x: 5 y: 8]->[x: 8 y: 8]->[x: 8 y: 9]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 7 y: 7]->[x: 8 y: 6]->[x: 9 y: 5]->[x: 8 y: 2]->[x: 9 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]|
-#26 Better route in population: 37.3399
-	Route:|->[x: 4 y: 9]->[x: 2 y: 8]->[x: 1 y: 7]->[x: 3 y: 7]->[x: 5 y: 8]->[x: 8 y: 8]->[x: 8 y: 9]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 6 y: 7]->[x: 7 y: 7]->[x: 8 y: 6]->[x: 9 y: 5]->[x: 8 y: 2]->[x: 9 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]|
-#36 Better route in population: 37.3017
-	Route:|->[x: 3 y: 7]->[x: 2 y: 8]->[x: 1 y: 7]->[x: 4 y: 9]->[x: 5 y: 8]->[x: 8 y: 8]->[x: 8 y: 9]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 6 y: 7]->[x: 7 y: 7]->[x: 8 y: 6]->[x: 9 y: 5]->[x: 8 y: 2]->[x: 9 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]|
-#38 Better route in population: 36.518
-	Route:|->[x: 2 y: 8]->[x: 1 y: 7]->[x: 3 y: 7]->[x: 4 y: 9]->[x: 5 y: 8]->[x: 8 y: 8]->[x: 8 y: 9]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 6 y: 7]->[x: 7 y: 7]->[x: 8 y: 6]->[x: 9 y: 5]->[x: 8 y: 2]->[x: 9 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]|
-#39 Better route in population: 35.9323
-	Route:|->[x: 1 y: 7]->[x: 2 y: 8]->[x: 3 y: 7]->[x: 4 y: 9]->[x: 5 y: 8]->[x: 8 y: 8]->[x: 8 y: 9]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 6 y: 7]->[x: 7 y: 7]->[x: 8 y: 6]->[x: 9 y: 5]->[x: 8 y: 2]->[x: 9 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]|
-#75 Better route in population: 34.9481
-	Route:|->[x: 1 y: 7]->[x: 2 y: 8]->[x: 3 y: 7]->[x: 4 y: 9]->[x: 5 y: 8]->[x: 8 y: 8]->[x: 8 y: 9]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 6 y: 7]->[x: 7 y: 7]->[x: 8 y: 6]->[x: 9 y: 5]->[x: 9 y: 2]->[x: 8 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]|
-#94 Better route in population: 34.2001
-	Route:|->[x: 1 y: 3]->[x: 1 y: 7]->[x: 2 y: 8]->[x: 3 y: 7]->[x: 4 y: 9]->[x: 5 y: 8]->[x: 6 y: 7]->[x: 7 y: 7]->[x: 8 y: 8]->[x: 8 y: 9]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 8 y: 6]->[x: 9 y: 5]->[x: 9 y: 2]->[x: 8 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]|
-#96 Better route in population: 32.4361
-	Route:|->[x: 1 y: 7]->[x: 2 y: 8]->[x: 3 y: 7]->[x: 4 y: 9]->[x: 5 y: 8]->[x: 6 y: 7]->[x: 7 y: 7]->[x: 8 y: 8]->[x: 8 y: 9]->[x: 9 y: 9]->[x: 9 y: 8]->[x: 8 y: 6]->[x: 9 y: 5]->[x: 9 y: 2]->[x: 8 y: 2]->[x: 7 y: 3]->[x: 5 y: 1]->[x: 4 y: 1]->[x: 0 y: 1]->[x: 1 y: 3]|
-This is the END!
-Process finished with exit code 0
+#|D|#|#|#|#|#|#| 7 
+----------------
+#|#|#|#|#|J|#|#| 6 
+----------------
+#|#|#|#|H|#|#|#| 5 
+----------------
+#|#|#|#|G|#|#|#| 4 
+----------------
+A|#|#|#|#|#|#|#| 3 
+----------------
+#|C|#|#|#|#|#|L| 2 
+----------------
+#|#|F|#|#|I|#|#| 1 
+----------------
+#|B|E|#|#|#|K|#| 0 
+----------------
+0 1 2 3 4 5 6 7 
+First best route in population #1: 35.0647
+Route: |->[x: 2 y: 0]->[x: 6 y: 0]->[x: 7 y: 2]->[x: 5 y: 1]->[x: 0 y: 3]->[x: 2 y: 1]->[x: 1 y: 2]->[x: 1 y: 0]->[x: 4 y: 4]->[x: 5 y: 6]->[x: 1 y: 7]->[x: 4 y: 5]|
+Genetic algorithm config: tournamentSize: 5 mutationRate: 0.015 elitsm: 1#3 Better route in population: 32.3007
+	Route:|->[x: 6 y: 0]->[x: 7 y: 2]->[x: 5 y: 1]->[x: 0 y: 3]->[x: 2 y: 1]->[x: 1 y: 2]->[x: 2 y: 0]->[x: 1 y: 0]->[x: 4 y: 4]->[x: 5 y: 6]->[x: 1 y: 7]->[x: 4 y: 5]|
+#5 Better route in population: 29.6505
+	Route:|->[x: 6 y: 0]->[x: 7 y: 2]->[x: 5 y: 1]->[x: 0 y: 3]->[x: 1 y: 2]->[x: 2 y: 1]->[x: 2 y: 0]->[x: 1 y: 0]->[x: 4 y: 4]->[x: 5 y: 6]->[x: 1 y: 7]->[x: 4 y: 5]|
+#7 Better route in population: 28.8286
+	Route:|->[x: 0 y: 3]->[x: 1 y: 2]->[x: 2 y: 1]->[x: 2 y: 0]->[x: 1 y: 0]->[x: 4 y: 4]->[x: 5 y: 6]->[x: 1 y: 7]->[x: 4 y: 5]->[x: 6 y: 0]->[x: 5 y: 1]->[x: 7 y: 2]|
+#10 Better route in population: 27.2428
+	Route:|->[x: 0 y: 3]->[x: 1 y: 2]->[x: 2 y: 1]->[x: 2 y: 0]->[x: 1 y: 0]->[x: 6 y: 0]->[x: 7 y: 2]->[x: 5 y: 1]->[x: 4 y: 4]->[x: 1 y: 7]->[x: 5 y: 6]->[x: 4 y: 5]|
+#12 Better route in population: 26.9649
+	Route:|->[x: 6 y: 0]->[x: 7 y: 2]->[x: 5 y: 1]->[x: 2 y: 0]->[x: 1 y: 0]->[x: 2 y: 1]->[x: 1 y: 2]->[x: 0 y: 3]->[x: 4 y: 4]->[x: 5 y: 6]->[x: 1 y: 7]->[x: 4 y: 5]|
+#13 Better route in population: 26.7801
+	Route:|->[x: 6 y: 0]->[x: 7 y: 2]->[x: 5 y: 1]->[x: 2 y: 0]->[x: 1 y: 0]->[x: 2 y: 1]->[x: 1 y: 2]->[x: 0 y: 3]->[x: 4 y: 4]->[x: 1 y: 7]->[x: 5 y: 6]->[x: 4 y: 5]|
+#14 Better route in population: 26.7149
+	Route:|->[x: 6 y: 0]->[x: 7 y: 2]->[x: 5 y: 1]->[x: 4 y: 4]->[x: 1 y: 7]->[x: 5 y: 6]->[x: 4 y: 5]->[x: 0 y: 3]->[x: 1 y: 2]->[x: 2 y: 1]->[x: 2 y: 0]->[x: 1 y: 0]|
+#19 Better route in population: 23.8418
+	Route:|->[x: 6 y: 0]->[x: 7 y: 2]->[x: 5 y: 1]->[x: 4 y: 4]->[x: 5 y: 6]->[x: 4 y: 5]->[x: 1 y: 7]->[x: 0 y: 3]->[x: 1 y: 2]->[x: 2 y: 1]->[x: 2 y: 0]->[x: 1 y: 0]|
+#25 Better route in population: 23.1233
+	Route:|->[x: 6 y: 0]->[x: 7 y: 2]->[x: 5 y: 1]->[x: 4 y: 4]->[x: 4 y: 5]->[x: 5 y: 6]->[x: 1 y: 7]->[x: 0 y: 3]->[x: 1 y: 2]->[x: 2 y: 1]->[x: 2 y: 0]->[x: 1 y: 0]|
+#26 Better route in population: 23.0199
+	Route:|->[x: 7 y: 2]->[x: 6 y: 0]->[x: 5 y: 1]->[x: 4 y: 4]->[x: 5 y: 6]->[x: 4 y: 5]->[x: 1 y: 7]->[x: 0 y: 3]->[x: 1 y: 2]->[x: 2 y: 1]->[x: 2 y: 0]->[x: 1 y: 0]|
+#29 Better route in population: 22.3014
+	Route:|->[x: 7 y: 2]->[x: 6 y: 0]->[x: 5 y: 1]->[x: 4 y: 4]->[x: 4 y: 5]->[x: 5 y: 6]->[x: 1 y: 7]->[x: 0 y: 3]->[x: 1 y: 2]->[x: 2 y: 1]->[x: 2 y: 0]->[x: 1 y: 0]|
+This is the END! It took: 1193 mls
+Now some brute force!!!!!!!!!
+Better route in brute force: 22.2074
+	Route:|->[x: 5 y: 6]->[x: 4 y: 5]->[x: 4 y: 4]->[x: 7 y: 2]->[x: 6 y: 0]->[x: 5 y: 1]->[x: 2 y: 1]->[x: 2 y: 0]->[x: 1 y: 0]->[x: 1 y: 2]->[x: 0 y: 3]->[x: 1 y: 7]|
+Better route in brute force: 22.1981
+	Route:|->[x: 5 y: 6]->[x: 4 y: 5]->[x: 4 y: 4]->[x: 7 y: 2]->[x: 6 y: 0]->[x: 5 y: 1]->[x: 2 y: 0]->[x: 1 y: 0]->[x: 2 y: 1]->[x: 1 y: 2]->[x: 0 y: 3]->[x: 1 y: 7]|
+This is the END! It took: 506692 mls
 ```
