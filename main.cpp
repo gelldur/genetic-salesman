@@ -1,7 +1,9 @@
 #include <iostream>
-#include <Population.h>
-#include <GeneticAlgorithm.h>
+#include <algorithm>
+#include <chrono>
 
+#include "Population.h"
+#include "GeneticAlgorithm.h"
 #include "Map.h"
 
 int main()
@@ -14,6 +16,8 @@ int main()
 
 	Map map{(int) (cities * cities * 0.2F), cities, cities};
 	std::cout << map << std::endl;
+
+	auto start = std::chrono::steady_clock::now();
 
 	Population population{50, map};
 	float bestRouteDistance = population.getBestRoute(map).totalDistance(map);
@@ -39,7 +43,8 @@ int main()
 		}
 	}
 
-	std::cout << "This is the END!";
+	std::cout << "This is the END! It took: " << (std::chrono::duration_cast<std::chrono::milliseconds>
+			(std::chrono::steady_clock::now() - start)).count() << " mls" << std::endl;
 
 	return 0;
 }
